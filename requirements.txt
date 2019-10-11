@@ -1,0 +1,48 @@
+###############################################################################
+README
+Alissa Bonnel
+BONA25589603
+###############################################################################
+Requis:
+- Python 3
+
+ETAPE 1 #######################################################################
+INSTALLER JQUERY:
+- En ligne de commande:
+	pip install ztfy.jqueryui
+	pip install js.jquery
+
+ETAPE 2 #######################################################################
+INSTALLER FLASK SUR WINDOWS:
+En ligne de commande: pip install flask
+
+ETAPE 3 #######################################################################
+LANCER L'APPLICATION mon_projet.py:
+- En ligne de commande, se rendre ou est localise le fichier mon_projet.py
+- En ligne de commande:
+	POUR WINDOWS:
+		set FLASK_APP=mon_projet.py
+		set FLASK_ENV=development
+		flask run
+	POUR LINUX ET MAC:
+		export FLASK_APP=mon_projet.py
+		export FLASK_ENV=development
+		flask run
+
+ETAPE 4 #######################################################################
+INSTALLER NGINX:
+- Telecharger sur le site: http://nginx.org/en/download.html
+- Une fois installe, changer le fichier \nginx-1.17.4\conf\ngnix.conf par celui
+  present dans mon projet. Puis, changer le chemin des fichier ssl.crt et ss.key.
+- Ensuite, lancer l'application.
+- Dans votre navigateur, se rendre sur: localhost
+
+ETAPE 5 #######################################################################
+UTILISATION:
+- Entrer prenom, nom et date de naissance dans les champs.
+- Cliquer sur "Voir mon horoscope".
+- Une fois tous les champs remplis, le lien
+  "Voir une image pas tres representative" apparait. Celui-ci ouvre un un lien
+  externe vers une image, differente pour chaque signe astrologique.
+
+###############################################################################

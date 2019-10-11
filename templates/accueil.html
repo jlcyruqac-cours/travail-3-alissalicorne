@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../static/style.css">
+        <title>HTML5</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $(document).ready(function () {
+                    $("#TXT_Date").datepicker({
+                        dateFormat: 'yy-mm-dd',
+                        showOn: "button",
+                        buttonImage: "../static/dropdown.png",
+                        buttonImageOnly: false,
+                        buttonText: "Select date"
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body class="body1">
+        <div class="container">
+            <br><br><br><br>
+            <form class="form-inline">
+                <table class="table1">
+                    <tr>
+                        <td><p>Prenom</p></td>
+                        <td>
+                            <div class="form-group">
+                                <label class="sr-only" for="TXT_prenom">Prenom</label>
+                                <input type="text" class="form-control" id="TXT_prenom" placeholder="Prenom">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Nom</p></td>
+                        <td>
+                            <div class="form-group">
+                                <label class="sr-only" for="TXT_Nom">Nom</label>
+                                <input type="text" class="form-control" id="TXT_Nom" placeholder="Nom">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>Date</p></td>
+                        <td>
+                            <div class="form-group">
+                                <label class="sr-only" for="TXT_Date">Date</label>
+                                <input type="text" class="form-control" id="TXT_Date" placeholder="Date" disabled>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <button type="submit" class="btn btn-default center-block">Voir mon horoscope</button>
+            </form>
+            <br>
+            <div id="TXT_Horoscope_Image" class="container" style="display:none;"></div><br>
+            <div id="TXT_Horoscope_Entete" class="container" style="display:none;"></div><br>
+            <div id="TXT_Horoscope_Description" class="container" style="display:none;"></div>
+            <div id="TXT_Erreur" class="alert alert-danger" role="alert" style="display:none;"></div>
+            <br>
+            <img src="../static/licorne.png" alt="Licorne">
+        </div>
+    </body>
+</html>
